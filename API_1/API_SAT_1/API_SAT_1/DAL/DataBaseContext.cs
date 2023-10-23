@@ -10,6 +10,13 @@ namespace API_SAT_1.DAL
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();// Esto es un indice para evitar nombres duplicados de paises
+        }
+
         public DbSet<Country> Countries { get; set; } //Esta linea me toma la clase Country y me la mapea en SQL SERVER para crear una tabla llamada COUNTRIES
 
     }

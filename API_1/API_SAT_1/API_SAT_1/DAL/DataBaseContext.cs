@@ -19,5 +19,6 @@ namespace API_SAT_1.DAL
 
         public DbSet<Country> Countries { get; set; } //Esta linea me toma la clase Country y me la mapea en SQL SERVER para crear una tabla llamada COUNTRIES
 
+        //Por cada nueva entidad que yo creo, debo crearle su Dbset
     }
 }
